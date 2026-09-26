@@ -3,7 +3,6 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { ToastProvider, useToast } from './context/ToastContext';
 import { Sidebar } from './components/layout/Sidebar';
 import { Navbar } from './components/layout/Navbar';
-import { HackathonDemoGuide } from './components/common/HackathonDemoGuide';
 import { LoginPage } from './pages/LoginPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { ProductsPage } from './pages/ProductsPage';
@@ -184,13 +183,6 @@ const StockSenseApp: React.FC = () => {
           {currentTab === 'profile' && <ProfilePage onRefreshData={fetchGlobalData} />}
         </main>
       </div>
-
-      {/* Interactive Hackathon Judge Demo Walkthrough Assistant */}
-      <HackathonDemoGuide
-        currentTab={currentTab}
-        onNavigate={setCurrentTab}
-        onRefreshData={fetchGlobalData}
-      />
     </div>
   );
 };
